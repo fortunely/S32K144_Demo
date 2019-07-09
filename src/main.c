@@ -1,24 +1,22 @@
-/*
- * main implementation: use this 'C' sample to create your own application
- *
+/**
+* @filename main.c
+* @author Martin
+* @brief Application Entry source file
+* @date 2019-07-09
+* @version 0.1
+* @note initial draft
+*/
+
+#include "Task.h"
+#include "Init.h"
+
+/**
+ * main function for application entry
+ * @return application execute status.
+ * @note The function will never return if the application runs normally.
  */
-
-
-#include "S32K144.h" /* include peripheral declarations S32K144 */
-
 int main(void)
 {
-#define COUNTER_LIMIT 100
-
-        int counter = 0;
-
-        for(;;) {       
-            counter++;
-
-            if(counter > COUNTER_LIMIT) {
-                counter = 0;
-            }
-        }
-
+	Task_MainCycle();
 	return 0;
 }
