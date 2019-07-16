@@ -17,6 +17,7 @@
  */
 int main(void)
 {
+	Init();
 	Task_MainCycle();
 	return 0;
 }
